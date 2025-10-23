@@ -5,7 +5,7 @@ from pysafebrowsing import SafeBrowsing
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-API_KEY = "AIzaSyD7NYHGEbUT55tG4MBoUD3wWMSifkn4OCk"
+
 sb = SafeBrowsing(API_KEY)
 
 # --- Local blacklist (can extend to file/db later) ---
@@ -51,3 +51,4 @@ def check_url():
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
+
